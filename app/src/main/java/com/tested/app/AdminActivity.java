@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import android.content.Intent;
 import android.view.View;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -50,7 +51,7 @@ public class AdminActivity  extends Activity {
     }
 
     public void login(View v){
-        new HttpAsyncTask().execute("http://kursova.esy.es/index.php?username="+login.getText()+"&password="+pass.getText());
+        new HttpAsyncTask().execute("http://kursova.esy.es/users/auth/email/"+login.getText()+"/password/"+pass.getText());
     }
 
     public static String GET(String url){
@@ -110,12 +111,17 @@ public class AdminActivity  extends Activity {
         @Override
         protected void onPostExecute(String result) {
             Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-            //etResponse.setText(result);
             try {
                 JSONObject reader = new JSONObject(result);
-                //JSONObject sys  = reader.getJSONObject("username");
-                String country = reader.getString("username");
-                etResponse.setText(country);
+                Boolean result_http = reader.getBoolean("result");
+                if (result_http){
+                    Intent intent = new Intent(AdminActivity.this, AddPanel.class);
+                    startActivity(intent);
+                    setResult(RESULT_OK);
+                    finish();
+                }
+                else
+                    Toast.makeText(getBaseContext(), "Данные не верны!", Toast.LENGTH_LONG).show();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
