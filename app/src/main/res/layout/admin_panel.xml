@@ -3,21 +3,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent" android:background="@drawable/calendar___task"
+              android:gravity="center_vertical">
 
     <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Добавить новый тест"
-            android:id="@+id/button" android:layout_gravity="center_horizontal" android:onClick="addTest"/>
+            android:id="@+id/button" android:layout_gravity="center_horizontal" android:onClick="addTest"
+            android:background="@drawable/buttonshape" android:layout_marginTop="5dp" android:typeface="serif"
+            android:textColor="@android:color/white"/>
     <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Просмотр всех тестов"
-            android:id="@+id/button2" android:layout_gravity="center_horizontal" android:onClick="allTest"/>
+            android:id="@+id/button2" android:onClick="allTest"
+            android:background="@drawable/buttonshape" android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal" android:typeface="serif"
+            android:textColor="@android:color/white"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="На главную"
-            android:id="@+id/button3" android:layout_gravity="center_horizontal" android:onClick="onHome"/>
+            android:id="@+id/button3" android:layout_gravity="center_horizontal" android:onClick="onHome"
+            android:textColor="@android:color/white" android:layout_marginTop="15dp"/>
 </LinearLayout>

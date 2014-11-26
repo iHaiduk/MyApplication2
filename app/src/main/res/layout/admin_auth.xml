@@ -6,7 +6,8 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
+                tools:context=".MainActivity" android:background="@drawable/calendar___task"
+                android:gravity="center_vertical">
     <TextView
             android:id="@+id/tvIsConnected"
             android:layout_width="wrap_content"
@@ -35,7 +36,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginTop="44dp"
-            android:ems="10" >
+            android:ems="10" android:textColor="@android:color/white" android:textColorHighlight="@android:color/white">
 
         <requestFocus android:layout_width="wrap_content" />
 
@@ -47,7 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/login"
             android:layout_alignParentLeft="true"
-            android:text="@string/Username" />
+            android:text="Ваше имя" android:textColor="#ffffffff" android:textSize="16dp"
+            android:textStyle="italic" android:typeface="serif"/>
 
     <TextView
             android:id="@+id/textView3"
@@ -55,8 +57,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="@string/App"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:text="Авторизация администратора"
+            android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="#ffffffff"/>
 
 
     <Button
@@ -64,10 +66,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="login"
-            android:text="@string/LoginGet"
+            android:text="Авторизация"
             android:layout_toStartOf="@+id/textView3" android:layout_marginTop="32dp"
             android:layout_below="@+id/pass"
-            android:layout_alignEnd="@+id/textView3" android:layout_alignStart="@+id/textView3"/>
+            android:layout_alignEnd="@+id/textView3" android:layout_alignStart="@+id/textView3"
+            android:textColor="#ffffffff" android:textStyle="bold|italic" android:background="@drawable/buttonshape"
+            android:typeface="serif"/>
 
     <TextView
             android:id="@+id/textView2"
@@ -76,11 +80,6 @@
             android:layout_alignBaseline="@+id/pass"
             android:layout_alignBottom="@+id/pass"
             android:layout_alignParentLeft="true"
-            android:text="@string/Password" />
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/etResponse" android:layout_below="@+id/button1" android:layout_alignParentStart="true"
-            android:layout_marginTop="29dp" android:layout_above="@+id/tvIsConnected"
-            android:layout_alignEnd="@+id/tvIsConnected"/>
+            android:text="Пароль" android:textColor="#ffffffff" android:textSize="16dp"
+            android:textStyle="italic" android:typeface="serif"/>
 </RelativeLayout>

@@ -1,7 +1,12 @@
 package com.tested.app;
 
-/**
- * Created by Ihor on 25.11.2014.
- */
-public class AddTest {
+import android.app.Activity;
+import android.os.Bundle;
+
+public class AddTest extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.add_test);
+    }
 }

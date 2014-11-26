@@ -33,7 +33,6 @@ public class AdminActivity  extends Activity {
         setContentView(R.layout.admin_auth);
 
         // get reference to the views
-        etResponse = (EditText) findViewById(R.id.etResponse);
         login = (EditText) findViewById(R.id.login);
         pass = (EditText) findViewById(R.id.pass);
         tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
@@ -41,17 +40,47 @@ public class AdminActivity  extends Activity {
         // check if you are connected or not
         if(isConnected()){
             tvIsConnected.setBackgroundColor(0xFF00CC00);
-            tvIsConnected.setText("You are conncted");
+            tvIsConnected.setText("Интернет подключен");
         }
         else{
-            tvIsConnected.setText("You are NOT conncted");
+            tvIsConnected.setText("Отсутсвует подключение к сети");
         }
 
         // call AsynTask to perform network operation on separate thread
     }
 
+    public void onBack(View v){
+        setResult(RESULT_OK);
+        finish();
+    }
+
     public void login(View v){
         new HttpAsyncTask().execute("http://kursova.esy.es/users/auth/email/"+login.getText()+"/password/"+pass.getText());
+    }
+    private class HttpAsyncTask extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... urls) {
+
+            return GET(urls[0]);
+        }
+        // onPostExecute displays the results of the AsyncTask.
+        @Override
+        protected void onPostExecute(String result) {
+            try {
+                JSONObject reader = new JSONObject(result);
+                Boolean result_http = reader.getBoolean("result");
+                if (result_http){
+                    Intent intent = new Intent(AdminActivity.this, AddPanel.class);
+                    startActivity(intent);
+                    setResult(RESULT_OK);
+                    finish();
+                }
+                else
+                    Toast.makeText(getBaseContext(), "Данные не верны!", Toast.LENGTH_LONG).show();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public static String GET(String url){
@@ -100,36 +129,5 @@ public class AdminActivity  extends Activity {
             return true;
         else
             return false;
-    }
-    private class HttpAsyncTask extends AsyncTask<String, Void, String> {
-        @Override
-        protected String doInBackground(String... urls) {
-
-            return GET(urls[0]);
-        }
-        // onPostExecute displays the results of the AsyncTask.
-        @Override
-        protected void onPostExecute(String result) {
-            Toast.makeText(getBaseContext(), "Received!", Toast.LENGTH_LONG).show();
-            try {
-                JSONObject reader = new JSONObject(result);
-                Boolean result_http = reader.getBoolean("result");
-                if (result_http){
-                    Intent intent = new Intent(AdminActivity.this, AddPanel.class);
-                    startActivity(intent);
-                    setResult(RESULT_OK);
-                    finish();
-                }
-                else
-                    Toast.makeText(getBaseContext(), "Данные не верны!", Toast.LENGTH_LONG).show();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    public void onBack(View v){
-        setResult(RESULT_OK);
-        finish();
     }
 }

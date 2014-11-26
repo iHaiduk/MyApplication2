@@ -29,6 +29,9 @@
         <activity
             android:name="com.tested.app.AddPanel"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddTest"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
