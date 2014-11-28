@@ -103,11 +103,13 @@ public class AddPanel extends Activity {
         @Override
         protected void onPostExecute(String result) {
             try {
+
                 JSONObject reader = new JSONObject(result);
                 Boolean result_http = reader.getBoolean("result");
-
+                String id = reader.getString("id");
                 if (result_http){
                     Intent intent = new Intent(AddPanel.this, AddTest.class);
+                    intent.putExtra("id", id);
                     startActivity(intent);
                     setResult(RESULT_OK);
                     finish();

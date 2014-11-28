@@ -16,7 +16,7 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2" android:layout_gravity="top|left"
+            android:id="@+id/textQuestion" android:layout_gravity="top|left"
             android:hint="Задайте вопрос..." android:layout_weight="0.79" android:paddingLeft="10dp"
             android:paddingRight="10dp" android:padding="10dp" android:paddingTop="10dp" android:textStyle="italic"
             android:textColor="@android:color/white" android:textColorHint="#ffd3ccd3"
@@ -30,52 +30,56 @@
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" android:id="@+id/radioGroup">
+                    android:orientation="vertical" android:id="@+id/choseQuestion">
         <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/radioButton" android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" android:checked="true"
-                android:layout_above="@+id/editText2" android:paddingTop="10dp" android:paddingBottom="15dp"/>
+                android:layout_above="@+id/answer3" android:paddingTop="10dp" android:paddingBottom="15dp"
+                android:text="1" android:textColor="@android:color/transparent"/>
             <RadioButton android:layout_width="wrap_content" android:layout_height="54dp"
                      android:id="@+id/radioButton3"
                      android:checked="false"
-                     android:paddingTop="10dp" android:paddingBottom="15dp" android:layout_below="@+id/editText2"
-                     android:layout_alignParentStart="true"/>
+                     android:paddingTop="10dp" android:paddingBottom="15dp" android:layout_below="@+id/answer3"
+                     android:layout_alignParentStart="true" android:text="2"
+                     android:textColor="@android:color/transparent"/>
             <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                      android:id="@+id/radioButton2"
-                     android:layout_toStartOf="@+id/editText"
+                     android:layout_toStartOf="@+id/answer2"
                      android:checked="false" android:paddingTop="10dp" android:paddingBottom="15dp"
-                     android:layout_below="@+id/radioGroup" android:layout_alignParentStart="true"/>
+                     android:layout_below="@+id/choseQuestion" android:layout_alignParentStart="true" android:text="3"
+                     android:textColor="@android:color/transparent"/>
             <RadioButton android:layout_width="wrap_content" android:layout_height="55dp"
                      android:id="@+id/radioButton4" android:checked="false"
                      android:paddingTop="10dp" android:paddingBottom="15dp" android:layout_below="@+id/radioButton3"
-                     android:layout_alignParentStart="true"/>
+                     android:layout_alignParentStart="true" android:text="4"
+                     android:textColor="@android:color/transparent"/>
         </RadioGroup>
-        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editText2"
-                  android:layout_toEndOf="@+id/radioGroup"
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/answer3"
+                  android:layout_toEndOf="@+id/choseQuestion"
                   android:hint="Вариант ответа..." android:textColor="#fffffff4" android:textColorHint="#96ffffff"
                   android:paddingTop="10dp" android:paddingBottom="15dp" android:typeface="serif"
                   android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
-        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editText3"
-                  android:layout_toEndOf="@+id/radioGroup"
-                  android:layout_below="@+id/editText2" android:layout_alignParentEnd="true"
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/answer4"
+                  android:layout_toEndOf="@+id/choseQuestion"
+                  android:layout_below="@+id/answer3" android:layout_alignParentEnd="true"
                   android:hint="Вариант ответа..." android:textColor="#fffffff4" android:textColorHint="#96ffffff"
                   android:paddingTop="10dp" android:paddingBottom="15dp" android:typeface="serif"/>
-        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/editText4"
-                  android:layout_toEndOf="@+id/radioGroup"
+        <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/answer1"
+                  android:layout_toEndOf="@+id/choseQuestion"
                   android:hint="Вариант ответа..." android:textColor="#fffffff4" android:textColorHint="#96ffffff"
                   android:paddingTop="10dp" android:paddingBottom="15dp" android:typeface="serif"
-                  android:layout_alignParentTop="true" android:layout_alignEnd="@+id/editText2"/>
+                  android:layout_alignParentTop="true" android:layout_alignEnd="@+id/answer3"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
-                android:layout_toEndOf="@+id/radioGroup"
+                android:id="@+id/answer2"
+                android:layout_toEndOf="@+id/choseQuestion"
                 android:hint="Вариант ответа..." android:textColor="#fffffff4" android:textColorHint="#96ffffff"
                 android:paddingTop="10dp"
                 android:paddingBottom="15dp" android:typeface="serif" android:layout_weight="1"
-                android:layout_above="@+id/editText2" android:layout_alignEnd="@+id/editText2"/>
+                android:layout_above="@+id/answer3" android:layout_alignEnd="@+id/answer3"/>
     </RelativeLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -91,6 +95,7 @@
                 android:layout_width="176dp"
                 android:layout_height="wrap_content"
                 android:text="Еще вопрос"
-                android:id="@+id/button2" android:layout_weight="0.50" android:typeface="serif"/>
+                android:id="@+id/button2" android:layout_weight="0.50" android:typeface="serif"
+                android:onClick="addQuestion"/>
     </LinearLayout>
 </LinearLayout>
