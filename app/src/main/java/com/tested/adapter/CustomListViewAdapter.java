@@ -11,9 +11,6 @@ import com.tested.model.TestModel;
 
 import java.util.List;
 
-/**
- * Created by Ihor on 29.11.2014.
- */
 public class CustomListViewAdapter extends BaseAdapter {
 
     private List<TestModel> testList;
@@ -48,7 +45,9 @@ public class CustomListViewAdapter extends BaseAdapter {
         TestModel testModel = getTestModel(position);
 
         TextView textView = (TextView) view.findViewById(R.id.txtTitle);
+        TextView idRow = (TextView) view.findViewById(R.id.idRow);
 
+        idRow.setText(testModel.getId());
         textView.setText(testModel.getName());
 
         return view;
@@ -56,4 +55,5 @@ public class CustomListViewAdapter extends BaseAdapter {
     private TestModel getTestModel(int position){
         return (TestModel) getItem(position);
     }
+
 }

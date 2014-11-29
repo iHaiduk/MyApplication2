@@ -4,49 +4,56 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
-import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.tested.adapter.CustomListViewAdapter;
+import com.tested.model.TestModel;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by Ihor on 29.11.2014.
- */
 public class testListView extends Activity {
+    private ListView listView;
+    private int typeSend = 1;
+    private String admin = "0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tester);
+        listView = (ListView) findViewById(R.id.listView);
+        if(getIntent().hasExtra("admin"))
+            admin = getIntent().getStringExtra("admin");
 
-        /*try
+        new HttpAsyncTask().execute("http://kursova.esy.es/test/all");
+    }
+
+
+    private List<TestModel> initData(JSONArray array) throws JSONException {
+
+        List<TestModel> list = new ArrayList<TestModel>();
+
+        for(int j=0; j<array.length();j++)
         {
-            String jsonInput = "[\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\",\"ten\"]";
-            JSONArray jsonArray = new JSONArray(jsonInput);
-            int length = jsonArray.length();
-            List<String> listContents = new ArrayList<String>(length);
-            for (int i = 0; i < length; i++)
-            {
-                listContents.add(jsonArray.getString(i));
-            }
-
-            ListView myListView = (ListView) findViewById(R.id.listView);
-            myListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listContents));
+            JSONObject curr = array.getJSONObject(j);
+            list.add(new TestModel(curr.getString("id"), curr.getString("name")));
         }
-        catch (Exception e)
-        {
-            // this is just an example
-        }*/
+
+        return list;
     }
 
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
@@ -58,17 +65,33 @@ public class testListView extends Activity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            Log.e("DEV", result.toString());
-            try {
                 // http://stackoverflow.com/questions/14566533/android-how-to-parse-jsonarray-from-string
+                switch(typeSend) {
+                    case 1:
+                        try {
+                            JSONArray reader = new JSONArray(result);
+                            CustomListViewAdapter adapter = new CustomListViewAdapter(testListView.this, initData(reader));
+                            listView.setAdapter(adapter);
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                    TextView textViewItem = ((TextView) view.findViewById(R.id.idRow));
+                                    typeSend = 2;
+                                    new HttpAsyncTask().execute("http://kursova.esy.es/test/view/id/" + textViewItem.getText().toString());
+                                }
+                            });
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case 2:
+                        Intent intent = new Intent(testListView.this, AdminViewTest.class);
 
-                JSONObject reader = new JSONObject(result);
-                System.out.println(reader.toString());
-                System.out.println(reader.get("id"));
+                        Log.e("DEV", admin);
+                        intent.putExtra("admin",admin);
+                        startActivity(intent);
+                }
 
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
         }
     }
 

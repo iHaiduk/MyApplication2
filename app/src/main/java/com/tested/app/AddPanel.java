@@ -5,14 +5,13 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
-import com.tested.util.RequestCode;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -54,7 +53,8 @@ public class AddPanel extends Activity {
                 .setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog,int id) {
-                                new HttpAsyncTask().execute("http://kursova.esy.es/test/create/name/"+userInput.getText().toString());
+                                String query = Uri.encode(userInput.getText().toString());
+                                new HttpAsyncTask().execute("http://kursova.esy.es/test/create/name/"+query);
                             }
                         })
                 .setNegativeButton("Cancel",
@@ -73,15 +73,13 @@ public class AddPanel extends Activity {
 
     public void allTest(View v){
         Intent intent = new Intent(this, testListView.class);
+        intent.putExtra("admin", "1");
         startActivity(intent);
-        setResult(RESULT_OK);
-        finish();
     }
 
     public void onHome(View v){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        setResult(RESULT_OK);
         finish();
     }
     @Override
@@ -89,7 +87,6 @@ public class AddPanel extends Activity {
     {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-        setResult(RESULT_OK);
         finish();
     }
 
@@ -112,7 +109,6 @@ public class AddPanel extends Activity {
                     Intent intent = new Intent(AddPanel.this, AddTest.class);
                     intent.putExtra("id", id);
                     startActivity(intent);
-                    setResult(RESULT_OK);
                     finish();
                 }
 

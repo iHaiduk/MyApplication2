@@ -10,7 +10,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Новый вопрос в тест"
-            android:id="@+id/textView" android:layout_gravity="center_horizontal"
+            android:id="@+id/idRow" android:layout_gravity="center_horizontal"
             android:textColor="@android:color/white" android:textSize="20dp" android:textStyle="italic"
             android:typeface="serif"/>
     <EditText

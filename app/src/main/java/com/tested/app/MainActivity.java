@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
                 startActivityForResult(intent, RequestCode.REQ_CODE_ADMIN);
                 break;
             case R.id.test:
-                intent = new Intent(this, TesterActivity.class);
+                intent = new Intent(this, testListView.class);
                 startActivityForResult(intent, RequestCode.REQ_CODE_TESTER);
                 break;
         }
