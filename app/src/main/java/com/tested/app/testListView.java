@@ -29,14 +29,6 @@ public class testListView extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tester);
 
-        JSONObject json = null;
-        try {
-            json = readJsonFromUrl("https://graph.facebook.com/19292868552");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
         /*try
         {
             String jsonInput = "[\"one\",\"two\",\"three\",\"four\",\"five\",\"six\",\"seven\",\"eight\",\"nine\",\"ten\"]";
