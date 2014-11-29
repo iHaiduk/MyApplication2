@@ -72,7 +72,7 @@ public class AddPanel extends Activity {
     }
 
     public void allTest(View v){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, testListView.class);
         startActivity(intent);
         setResult(RESULT_OK);
         finish();
@@ -102,6 +102,7 @@ public class AddPanel extends Activity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
+            Log.e("DEV", result.toString());
             try {
 
                 JSONObject reader = new JSONObject(result);

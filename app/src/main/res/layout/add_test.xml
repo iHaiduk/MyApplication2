@@ -90,11 +90,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Закончить"
-                android:id="@+id/button" android:layout_weight="0.50" android:typeface="serif"/>
+                android:id="@+id/button" android:layout_weight="0.50" android:typeface="serif"
+                android:onClick="overQuestion"/>
         <Button
                 android:layout_width="176dp"
                 android:layout_height="wrap_content"
-                android:text="Еще вопрос"
+                android:text="Добавить"
                 android:id="@+id/button2" android:layout_weight="0.50" android:typeface="serif"
                 android:onClick="addQuestion"/>
     </LinearLayout>
