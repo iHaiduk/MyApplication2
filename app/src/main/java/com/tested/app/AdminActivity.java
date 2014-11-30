@@ -55,11 +55,7 @@ public class AdminActivity  extends Activity {
     }
 
     public void login(View v){
-        Intent intent = new Intent(AdminActivity.this, AddPanel.class);
-        startActivity(intent);
-        setResult(RESULT_OK);
-        finish();
-        //new HttpAsyncTask().execute("http://kursova.esy.es/users/auth/email/"+login.getText()+"/password/"+pass.getText());
+        new HttpAsyncTask().execute("http://kursova.esy.es/users/auth/email/"+login.getText()+"/password/"+pass.getText());
     }
     private class HttpAsyncTask extends AsyncTask<String, Void, String> {
         @Override

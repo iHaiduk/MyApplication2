@@ -96,7 +96,7 @@
                 android:layout_width="176dp"
                 android:layout_height="wrap_content"
                 android:text="Добавить"
-                android:id="@+id/button2" android:layout_weight="0.50" android:typeface="serif"
+                android:id="@+id/addTestButton" android:layout_weight="0.50" android:typeface="serif"
                 android:onClick="addQuestion"/>
     </LinearLayout>
 </LinearLayout>

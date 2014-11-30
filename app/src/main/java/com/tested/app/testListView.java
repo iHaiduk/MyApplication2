@@ -49,7 +49,8 @@ public class testListView extends Activity {
         for(int j=0; j<array.length();j++)
         {
             JSONObject curr = array.getJSONObject(j);
-            list.add(new TestModel(curr.getString("id"), curr.getString("name"), curr.getInt("count")));
+            if(curr.getInt("count") > 0)
+                list.add(new TestModel(curr.getString("id"), curr.getString("name"), curr.getInt("count")));
         }
 
         return list;
@@ -85,11 +86,12 @@ public class testListView extends Activity {
                         }
                         break;
                     case 2:
-                        Intent intent = new Intent(testListView.this, AdminViewTest.class);
+                        Intent intent = new Intent(testListView.this, UserViewTest.class);
 
                         Log.e("DEV", admin);
                         intent.putExtra("result",result);
                         startActivity(intent);
+                        finish();
                 }
 
         }

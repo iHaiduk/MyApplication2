@@ -94,12 +94,12 @@
                         android:layout_height="wrap_content"
                         android:text="Закончить"
                         android:id="@+id/button" android:layout_weight="0.50" android:typeface="serif"
-                        android:onClick="overQuestion"/>
+                        android:onClick="backToList"/>
                 <Button
                         android:layout_width="176dp"
                         android:layout_height="wrap_content"
-                        android:text="Дальше"
-                        android:id="@+id/button2" android:layout_weight="0.50" android:typeface="serif"
-                        android:onClick="addQuestion"/>
+                        android:text="Ответить"
+                        android:id="@+id/nextQuestion" android:layout_weight="0.50" android:typeface="serif"
+                        android:onClick="nextQuestion" android:enabled="false" android:focusable="false"/>
         </LinearLayout>
 </LinearLayout>

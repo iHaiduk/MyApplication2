@@ -46,9 +46,11 @@ public class CustomListViewAdapter extends BaseAdapter {
 
         TextView textView = (TextView) view.findViewById(R.id.testname);
         TextView idRow = (TextView) view.findViewById(R.id.idRow);
+        TextView lst = (TextView) view.findViewById(R.id.lst);
         TextView textView2 = (TextView) view.findViewById(R.id.numb);
 
         idRow.setText(testModel.getId());
+        lst.setText(Integer.toString(position + 1));
         textView.setText(testModel.getName());
         textView2.setText(Integer.toString(testModel.getCount()));
 

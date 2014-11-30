@@ -6,10 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
+import android.widget.*;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -50,6 +47,8 @@ public class AddTest extends Activity {
 
     public void addQuestion(View v){
         new HttpAsyncTask().execute();
+        Button addTestButton = (Button) findViewById(R.id.addTestButton);
+        addTestButton.setEnabled(false);
     }
     public void overQuestion(View v){
         Intent refresh = new Intent(this, AddPanel.class);
@@ -65,7 +64,6 @@ public class AddTest extends Activity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            Log.e("DEV", result.toString());
             try {
                 JSONObject reader = new JSONObject(result);
                 Boolean result_http = reader.getBoolean("result");

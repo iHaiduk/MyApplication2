@@ -99,7 +99,6 @@ public class AddPanel extends Activity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-            Log.e("DEV", result.toString());
             try {
 
                 JSONObject reader = new JSONObject(result);
