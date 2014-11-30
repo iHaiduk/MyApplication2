@@ -1,0 +1,390 @@
+2014/11/25 22:26:11 [error] [php] include(Tag.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Project\OpenServer\domains\kursova.dev\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\Project\OpenServer\domains\kursova.dev\protected\components\TagCloud.php(12): spl_autoload_call()
+#1 C:\Project\OpenServer\domains\kursova.dev\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#2 C:\Project\OpenServer\domains\kursova.dev\framework\web\CBaseController.php(173): TagCloud->run()
+#3 C:\Project\OpenServer\domains\kursova.dev\protected\views\layouts\column2.php(14): UsersController->widget()
+#4 C:\Project\OpenServer\domains\kursova.dev\framework\web\CBaseController.php(126): require()
+#5 C:\Project\OpenServer\domains\kursova.dev\framework\web\CBaseController.php(95): UsersController->renderInternal()
+#6 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(784): UsersController->renderFile()
+#7 C:\Project\OpenServer\domains\kursova.dev\protected\controllers\UsersController.php(128): UsersController->render()
+#8 C:\Project\OpenServer\domains\kursova.dev\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#9 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CFilterChain.php(133): UsersController->runAction()
+#11 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CInlineFilter.php(58): UsersController->filterAccessControl()
+#14 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(265): UsersController->runActionWithFilters()
+#17 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(282): UsersController->run()
+#18 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\Project\OpenServer\domains\kursova.dev\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\Project\OpenServer\domains\kursova.dev\index.php(18): CWebApplication->run()
+REQUEST_URI=/index.php/users
+2014/11/25 22:26:15 [error] [php] include(Tag.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\Project\OpenServer\domains\kursova.dev\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\Project\OpenServer\domains\kursova.dev\protected\components\TagCloud.php(12): spl_autoload_call()
+#1 C:\Project\OpenServer\domains\kursova.dev\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#2 C:\Project\OpenServer\domains\kursova.dev\framework\web\CBaseController.php(173): TagCloud->run()
+#3 C:\Project\OpenServer\domains\kursova.dev\protected\views\layouts\column2.php(14): UsersController->widget()
+#4 C:\Project\OpenServer\domains\kursova.dev\framework\web\CBaseController.php(126): require()
+#5 C:\Project\OpenServer\domains\kursova.dev\framework\web\CBaseController.php(95): UsersController->renderInternal()
+#6 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(784): UsersController->renderFile()
+#7 C:\Project\OpenServer\domains\kursova.dev\protected\controllers\UsersController.php(128): UsersController->render()
+#8 C:\Project\OpenServer\domains\kursova.dev\framework\web\actions\CInlineAction.php(49): UsersController->actionIndex()
+#9 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CFilterChain.php(133): UsersController->runAction()
+#11 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CInlineFilter.php(58): UsersController->filterAccessControl()
+#14 C:\Project\OpenServer\domains\kursova.dev\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(265): UsersController->runActionWithFilters()
+#17 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(282): UsersController->run()
+#18 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\Project\OpenServer\domains\kursova.dev\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\Project\OpenServer\domains\kursova.dev\index.php(18): CWebApplication->run()
+REQUEST_URI=/users
+2014/11/25 22:31:37 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "index".' in C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php:878
+Stack trace:
+#0 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\Project\OpenServer\domains\kursova.dev\protected\controllers\SiteController.php(45): CController->render('index')
+#2 C:\Project\OpenServer\domains\kursova.dev\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#3 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#8 C:\Project\OpenServer\domains\kursova.dev\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\Project\OpenServer\domains\kursova.dev\index.php(18): CApplication->run()
+#10 {main}
+REQUEST_URI=/
+---
+2014/11/25 22:37:34 [error] [exception.CDbException] exception 'CDbException' with message 'Table "users" does not have a column named "email".' in C:\Project\OpenServer\domains\kursova.dev\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 C:\Project\OpenServer\domains\kursova.dev\framework\db\ar\CActiveRecord.php(1518): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\Project\OpenServer\domains\kursova.dev\protected\controllers\UsersController.php(143): CActiveRecord->findByAttributes(Array)
+#2 [internal function]: UsersController->actionAuth('admin', 'admin')
+#3 C:\Project\OpenServer\domains\kursova.dev\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#4 C:\Project\OpenServer\domains\kursova.dev\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UsersController), Object(ReflectionMethod), Array)
+#5 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\Project\OpenServer\domains\kursova.dev\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(282): CController->run('auth')
+#9 C:\Project\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(141): CWebApplication->runController('users/auth/emai...')
+#10 C:\Project\OpenServer\domains\kursova.dev\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\Project\OpenServer\domains\kursova.dev\index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/users/auth/email/admin/password/admin
+---
+2014/11/27 00:10:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\Selezon\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Selezon\OpenServer\domains\kursova.dev\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\Selezon\OpenServer\domains\kursova.dev\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\Selezon\OpenServer\domains\kursova.dev\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/11/27 00:12:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'test.test' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `test`.
+2014/11/26 20:36:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "crate".' in /home/u604712565/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(270): CController->missingAction('crate')
+#1 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('crate')
+#2 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/crate/name...')
+#3 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/u604712565/public_html/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/crate/name/dsdsdsd
+---
+2014/11/26 22:38:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/u604712565/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/u604712565/public_html/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/11/29 14:11:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in /home/u604712565/public_html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/u604712565/public_html/index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/11/29 14:11:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u604712565/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/u604712565/public_html/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/gii
+---
+2014/11/29 14:12:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u604712565/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/u604712565/public_html/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/gii
+---
+2014/11/29 14:12:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /home/u604712565/public_html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/u604712565/public_html/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/gii
+---
+2014/11/29 14:20:28 [error] [exception.CException] exception 'CException' with message 'QuestionController cannot find the requested view "index".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/QuestionController.php(128): CController->render('index', Array)
+#2 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(49): QuestionController->actionIndex()
+#3 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/u604712565/public_html/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/u604712565/public_html/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/u604712565/public_html/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/u604712565/public_html/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/u604712565/public_html/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/u604712565/public_html/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('')
+#12 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('question')
+#13 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /home/u604712565/public_html/index.php(18): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/question
+HTTP_REFERER=http://kursova.esy.es/index.php/gii/crud/index
+---
+2014/11/29 14:52:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/u604712565/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(270): CController->missingAction('login')
+#1 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/u604712565/public_html/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/login
+---
+2014/11/29 14:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /home/u604712565/public_html/framework/web/CController.php:483
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(270): CController->missingAction('login')
+#1 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/u604712565/public_html/index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/login
+---
+2014/11/29 22:31:16 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:31:26 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:33:11 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:49:11 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:49:22 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:53:58 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:55:21 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 22:55:31 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 23:00:37 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 23:00:45 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 23:01:50 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
+2014/11/29 23:02:01 [error] [exception.CException] exception 'CException' with message 'TestController cannot find the requested view "view".' in /home/u604712565/public_html/framework/web/CController.php:878
+Stack trace:
+#0 /home/u604712565/public_html/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#1 /home/u604712565/public_html/protected/controllers/TestController.php(18): CController->render('view', Array)
+#2 [internal function]: TestController->actionView('1')
+#3 /home/u604712565/public_html/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(TestController), Array)
+#4 /home/u604712565/public_html/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestController), Object(ReflectionMethod), Array)
+#5 /home/u604712565/public_html/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/u604712565/public_html/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#7 /home/u604712565/public_html/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/u604712565/public_html/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/u604712565/public_html/framework/web/CWebApplication.php(141): CWebApplication->runController('test/view/id/1')
+#10 /home/u604712565/public_html/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/u604712565/public_html/index.php(18): CApplication->run()
+#12 {main}
+REQUEST_URI=/test/view/id/1
+---
