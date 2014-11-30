@@ -41,7 +41,6 @@ public class UserViewTest extends Activity {
         try {
             resultObj = new JSONObject(result);
             reader = resultObj.getJSONArray("question");
-            System.out.println(reader);
 
             nexQuest = (Button) findViewById(R.id.nextQuestion);
 

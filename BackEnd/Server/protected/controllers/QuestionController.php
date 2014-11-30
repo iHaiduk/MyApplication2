@@ -8,7 +8,23 @@ class QuestionController extends Controller
 	 */
 	public function actionView($id)
 	{
-        echo CJSON::encode($this->loadModel($id));
+        $array = array();
+        $test = Test::model()->findByPk($id);
+        $model = $this->loadModel($id);
+
+        foreach($model as $key=>$val){
+            $array[] = array(
+                "id"=>$val->id,
+                "question"=>$val->question,
+                "uid_test"=>$id,
+                "answ1"=>$val->answ1,
+                "answ2"=>$val->answ2,
+                "answ3"=>$val->answ3,
+                "answ4"=>$val->answ4
+            );
+        }
+
+        echo json_encode(array("name"=>$test->name, "question"=>$array));
 	}
 
 	/**
