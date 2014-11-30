@@ -16,6 +16,7 @@ public class UserViewTest extends Activity {
 
     private int viewQuestion = 0;
     private JSONArray reader;
+    private JSONObject resultObj;
     private String result;
     private Button nexQuest;
 
@@ -24,6 +25,7 @@ public class UserViewTest extends Activity {
     private TextView answer2_user;
     private TextView answer3_user;
     private TextView answer4_user;
+    private TextView nameTest;
 
     public RadioGroup rg;
     private String uid_test;
@@ -36,20 +38,26 @@ public class UserViewTest extends Activity {
         setContentView(R.layout.view_row_question);
 
         result = getIntent().getStringExtra("result");
-        System.out.println(result);
-        nexQuest = (Button) findViewById(R.id.nextQuestion);
-
-        textQuestion_user = (TextView) findViewById(R.id.textQuestion_user);
-        answer1_user = (TextView) findViewById(R.id.answer1_user);
-        answer2_user = (TextView) findViewById(R.id.answer2_user);
-        answer3_user = (TextView) findViewById(R.id.answer3_user);
-        answer4_user = (TextView) findViewById(R.id.answer4_user);
-
-        rg = (RadioGroup) findViewById(R.id.choseQuestion_user);
-
-        nexQuest.setEnabled(true);
         try {
-            reader = new JSONArray(result);
+            resultObj = new JSONObject(result);
+            reader = resultObj.getJSONArray("question");
+            System.out.println(reader);
+
+            nexQuest = (Button) findViewById(R.id.nextQuestion);
+
+            textQuestion_user = (TextView) findViewById(R.id.textQuestion_user);
+            answer1_user = (TextView) findViewById(R.id.answer1_user);
+            answer2_user = (TextView) findViewById(R.id.answer2_user);
+            answer3_user = (TextView) findViewById(R.id.answer3_user);
+            answer4_user = (TextView) findViewById(R.id.answer4_user);
+            nameTest = (TextView) findViewById(R.id.nameTest);
+
+            rg = (RadioGroup) findViewById(R.id.choseQuestion_user);
+
+            nexQuest.setEnabled(true);
+
+            nameTest.setText(resultObj.getString("name"));
+
             if(reader.length() > 0 && viewQuestion != -1){
                 nexQuest.setEnabled(true);
                 setQuestion();
@@ -95,7 +103,7 @@ public class UserViewTest extends Activity {
         }
     }
 
-    private void setQuestion() throws JSONException {
+    public void setQuestion() throws JSONException {
         JSONObject object = reader.getJSONObject(viewQuestion);
 
         uid_test = object.getString("uid_test");

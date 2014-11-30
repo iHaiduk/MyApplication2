@@ -37,4 +37,11 @@
             android:text="0"
             android:id="@+id/count" android:layout_below="@+id/textView" android:layout_toEndOf="@+id/textView3"
             android:textColor="#ffffe700" android:textSize="30dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/procent" android:layout_below="@+id/answerT" android:layout_centerHorizontal="true"
+            android:textSize="25dp" android:textIsSelectable="true" android:textColor="#ffe5f8ff"
+            android:layout_marginTop="15dp"/>
 </RelativeLayout>

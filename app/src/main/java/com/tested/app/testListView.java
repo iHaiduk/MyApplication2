@@ -87,8 +87,6 @@ public class testListView extends Activity {
                         break;
                     case 2:
                         Intent intent = new Intent(testListView.this, UserViewTest.class);
-
-                        Log.e("DEV", admin);
                         intent.putExtra("result",result);
                         startActivity(intent);
                         finish();

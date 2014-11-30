@@ -28,6 +28,7 @@ public class Result extends Activity {
 
     private TextView answerT;
     private TextView count;
+    private TextView procent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class Result extends Activity {
 
         answerT = (TextView) findViewById(R.id.answerT);
         count = (TextView) findViewById(R.id.count);
+        procent = (TextView) findViewById(R.id.procent);
 
         new HttpAsyncTask().execute("http://kursova.esy.es/test/result/id/"+uid_test+"/answ/"+answer);
     }
@@ -56,6 +58,12 @@ public class Result extends Activity {
 
                 answerT.setText(reader.getString("answerT"));
                 count.setText(reader.getString("count"));
+
+                Float flAnsw = Float.parseFloat(reader.getString("answerT"));
+                Float flcount = Float.parseFloat(reader.getString("count"));
+                int percent = Float.valueOf((flAnsw / flcount)*100).intValue();
+
+                procent.setText(Integer.toString(percent)+"%");
 
             } catch (JSONException e) {
                 e.printStackTrace();
