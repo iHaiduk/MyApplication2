@@ -52,7 +52,7 @@
             android:textStyle="italic" android:typeface="serif"/>
 
     <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/numb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -67,14 +67,14 @@
             android:layout_height="wrap_content"
             android:onClick="login"
             android:text="Авторизация"
-            android:layout_toStartOf="@+id/textView3" android:layout_marginTop="32dp"
+            android:layout_toStartOf="@+id/numb" android:layout_marginTop="32dp"
             android:layout_below="@+id/pass"
-            android:layout_alignEnd="@+id/textView3" android:layout_alignStart="@+id/textView3"
+            android:layout_alignEnd="@+id/numb" android:layout_alignStart="@+id/numb"
             android:textColor="#ffffffff" android:textStyle="bold|italic" android:background="@drawable/buttonshape"
             android:typeface="serif"/>
 
     <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/idRow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/pass"

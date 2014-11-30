@@ -3,10 +3,12 @@ package com.tested.model;
 public class TestModel {
     private String id;
     private String name;
+    private int count;
 
-    public TestModel(String id, String name) {
+    public TestModel(String id, String name, int count) {
         this.name = name;
         this.id = id;
+        this.count = count;
     }
 
     public String getId() {
@@ -23,5 +25,13 @@ public class TestModel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }

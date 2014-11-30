@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -36,8 +35,8 @@ public class testListView extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tester);
         listView = (ListView) findViewById(R.id.listView);
-        if(getIntent().hasExtra("admin"))
-            admin = getIntent().getStringExtra("admin");
+        if(getIntent().hasExtra("admin") && Integer.parseInt(getIntent().getStringExtra("admin"))==1 )
+            admin = "1";
 
         new HttpAsyncTask().execute("http://kursova.esy.es/test/all");
     }
@@ -50,7 +49,7 @@ public class testListView extends Activity {
         for(int j=0; j<array.length();j++)
         {
             JSONObject curr = array.getJSONObject(j);
-            list.add(new TestModel(curr.getString("id"), curr.getString("name")));
+            list.add(new TestModel(curr.getString("id"), curr.getString("name"), curr.getInt("count")));
         }
 
         return list;
@@ -65,7 +64,7 @@ public class testListView extends Activity {
         // onPostExecute displays the results of the AsyncTask.
         @Override
         protected void onPostExecute(String result) {
-                // http://stackoverflow.com/questions/14566533/android-how-to-parse-jsonarray-from-string
+
                 switch(typeSend) {
                     case 1:
                         try {
@@ -77,7 +76,8 @@ public class testListView extends Activity {
                                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                     TextView textViewItem = ((TextView) view.findViewById(R.id.idRow));
                                     typeSend = 2;
-                                    new HttpAsyncTask().execute("http://kursova.esy.es/test/view/id/" + textViewItem.getText().toString());
+                                    if(admin == "0")
+                                        new HttpAsyncTask().execute("http://kursova.esy.es/question/view/id/" + textViewItem.getText().toString());
                                 }
                             });
                         } catch (JSONException e) {
@@ -88,7 +88,7 @@ public class testListView extends Activity {
                         Intent intent = new Intent(testListView.this, AdminViewTest.class);
 
                         Log.e("DEV", admin);
-                        intent.putExtra("admin",admin);
+                        intent.putExtra("result",result);
                         startActivity(intent);
                 }
 
