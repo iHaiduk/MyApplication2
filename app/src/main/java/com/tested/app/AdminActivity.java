@@ -25,7 +25,7 @@ import org.json.JSONObject;
 
 public class AdminActivity  extends Activity {
 
-    EditText etResponse, login, pass;
+    EditText login, pass;
     TextView tvIsConnected;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
